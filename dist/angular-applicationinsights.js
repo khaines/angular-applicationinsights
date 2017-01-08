@@ -852,9 +852,9 @@ var ApplicationInsights = (function () {
             handledAt: "Unhandled",
             exceptions: [
                 {
-                    typeName: exception.name,
-                    message: exception.message,
-                    stack: exception.stack,
+                    typeName: exception.name || "Unhandled",
+                    message: exception.message || "Unhandled",
+                    stack: exception.stack || "Unhandled",
                     parsedStack: parsedStack,
                     hasFullStack: !Tools.isNullOrUndefined(parsedStack)
                 }
